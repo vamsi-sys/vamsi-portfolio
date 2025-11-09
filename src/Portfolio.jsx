@@ -82,41 +82,63 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 bg-gray-100 px-6 md:px-20">
-        <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "Facial Expression Recognition System",
-              desc: "Built a real-time emotion detection model using CNN, YOLOv2, and RNN achieving 88% accuracy on the FER-2013 dataset.",
-            },
-            {
-              title: "Cyber Threat Detection using ANN",
-              desc: "Developed AI model using CNN and LSTM to detect cyberattacks with reduced false positives.",
-            },
-            {
-              title: "Spotify Song Suggestion System",
-              desc: "Created a music recommendation model using audio feature similarity and clustering algorithms.",
-            },
-            {
-              title: "House Price Prediction",
-              desc: "Built regression model using Scikit-learn for accurate price estimation.",
-            },
-          ].map((project, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.03 }}
-              className="bg-white rounded-xl shadow p-6 hover:shadow-xl transition"
-            >
-              <h3 className="text-xl font-semibold mb-2 text-indigo-600">{project.title}</h3>
-              <p className="text-gray-700 mb-4">{project.desc}</p>
-              <a href="#" className="text-indigo-500 hover:underline">
-                View on GitHub
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+<section className="py-16 bg-gray-100 px-6 md:px-20">
+  <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
+  <div className="grid md:grid-cols-2 gap-8">
+    {[
+      {
+        title: "Facial Expression Recognition System",
+        desc: "Built a real-time emotion detection model using CNN, YOLOv2, and RNN achieving 88% accuracy on the FER-2013 dataset.",
+        link: "https://github.com/vamsi-sys/btech-emotion-detector-CNN--OpenCV",
+      },
+      {
+        title: "Cyber Threat Detection using ANN",
+        desc: "Developed AI model using CNN and LSTM to detect cyberattacks with reduced false positives.",
+        link: "https://github.com/vamsi-sys/btech-event-based-threat-detection",
+      },
+      {
+        title: "Spotify Song Suggestion System",
+        desc: "Created a music recommendation model using audio feature similarity and clustering algorithms.",
+        link: "https://github.com/vamsi-sys/Spotify-songs-suggestions",
+      },
+      {
+        title: "House Price Prediction",
+        desc: "Built regression model using Scikit-learn for accurate price estimation.",
+        link: "https://github.com/vamsi-sys/HousePrice_Prediction",
+      },
+      {
+        title: "Iris Classification",
+        desc: "Developed an ML model to classify Iris flower species using SVM and decision tree algorithms.",
+        link: "https://github.com/vamsi-sys/Iris_Classification",
+      },
+      {
+        title: "Wine Quality Prediction",
+        desc: "Implemented regression-based ML model to predict wine quality using chemical parameters.",
+        link: "https://github.com/vamsi-sys/wine-quality-prediction",
+      },
+    ].map((project, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.03 }}
+        className="bg-white rounded-xl shadow p-6 hover:shadow-xl transition"
+      >
+        <h3 className="text-xl font-semibold mb-2 text-indigo-600">
+          {project.title}
+        </h3>
+        <p className="text-gray-700 mb-4">{project.desc}</p>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-500 hover:underline font-medium"
+        >
+          View on GitHub
+        </a>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* Education Section */}
       <section className="py-16 px-6 md:px-20">
