@@ -1,3 +1,4 @@
+import resume from './assets/resume.pdf';
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileDown } from "lucide-react";
 
@@ -54,8 +55,10 @@ export default function Portfolio() {
           </a>
 
           <a
-            href="/Vamsi_Krishna_ATS_Resume.pdf"
+            href={resume}
             download
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition"
           >
             <FileDown className="h-4 w-4" /> Download Resume
